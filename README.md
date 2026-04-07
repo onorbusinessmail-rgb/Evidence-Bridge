@@ -1,6 +1,6 @@
 # 🚀 Evidence-Bridge
 
-**PCからAndroidへファイルを爆速で転送する、Go言語製のエンジニア向けツール。**
+**PCからAndroidへファイルを爆速で転送する、Go言語製のアニメオタク向けツール。**
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![Platform: Windows](https://img.shields.io/badge/Platform-Windows-0078D6.svg)
@@ -30,6 +30,7 @@
 | **転送方向** | 現状は **PC ➔ Android** の一方通行のみ対応しています。 |
 
 ## 🗺️ 今後のロードマップ
+- [ ] 🔄 **双方向転送:** Android側からファイル転送。
 - [ ] 🔄 **接続リトライ:** USBの接触不良時、自動で再接続・再開。
 - [ ] 🕒 **フォルダ監視:** `Send` フォルダを監視し、指定時刻に自動転送。
 - [ ] 🎨 **GUI実装:** ドラッグ&ドロップで操作可能な専用ウィンドウ。
@@ -43,26 +44,46 @@
 
 ---
 
-# 🚀 Evidence-Bridge (English)
+# 🚀 Evidence-Bridge
 
-A blazing fast tool developed in Go for transferring files from PC to Android.
+**A high-performance file transfer tool developed in Go, optimized for Anime Enthusiasts to move files from PC to Android in a flash.**
 
-## ✨ Features
-* ⚡ **Blazing Fast:** High-speed file transfer leveraging ADB.
-* 🛠️ **Seamless:** Designed for a streamlined data transfer workflow.
-* 💻 **Environment:** Supports Windows PC to Android device transfers.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Platform: Windows](https://img.shields.io/badge/Platform-Windows-0078D6.svg)
+![Language: Go](https://img.shields.io/badge/Language-Go-00ADD8.svg)
+
+---
+
+## 💎 Features
+* ⚡ **Blazing Fast:** High-speed file transfer leveraging ADB, handling large files with ease.
+* 🛠️ **Seamless Operation:** Automates the transfer process for a smooth data workflow.
+* 💻 **Environment:** Supports transfers from Windows PC ➔ Android Devices.
 
 ## 📖 Usage
-1. **Prepare:** Enable "USB Debugging" on Android and connect to PC.
-2. **Run:** Execute `main.go` or launch the compiled `.exe`.
-3. **Setup:** On the first run, choose destination (Internal Storage / SD Card).
-4. **Transfer:** Drop files into the `Send` folder (works before or during execution).
-5. **Verify:** Check `bridge_log.txt` for the results.
+> [!TIP]
+> The configuration file (`config.ini`) will be automatically generated upon the first launch.
+
+1. **Prepare:** Enable "USB Debugging" on your Android device and connect it to your PC.
+2. **Execute:** Run `main.go` or launch the compiled `.exe`.
+3. **Setup:** On the first run, select your destination (Internal Storage / SD Card).
+4. **Transfer:** Drop files into the `Send` folder to trigger an automatic transfer (works even before launching the app).
+5. **Verify:** Check `bridge_log.txt` for the execution results after the transfer is complete.
+
+## ⚠️ Limitations
+| Item | Description |
+| :--- | :--- |
+| **SD Card Detection** | Behavior is undefined if "SD Card" is selected on a device without one installed. |
+| **Transfer Direction** | Currently supports **PC ➔ Android** (one-way) only. |
 
 ## 🗺️ Roadmap
-- [ ] **Connection Retry:** Auto-reconnect and resume if USB is interrupted.
-- [ ] **Hot Folder:** Scheduled automatic transfers from the `Send` folder.
-- [ ] **GUI:** Intuitive drag-and-drop graphical interface.
+- [ ] 🔄 **Two-Way Transfer:** Support for transferring files from Android back to PC.
+- [ ] 🔄 **Connection Retry:** Auto-reconnect and resume if the USB connection is interrupted.
+- [ ] 🕒 **Hot Folder Monitoring:** Watch the `Send` folder for automatic transfers at scheduled times.
+- [ ] 🎨 **GUI Implementation:** A dedicated window for intuitive drag-and-drop operations.
+
+## 🤝 Contributing
+Contributions, bug reports, and pull requests are highly welcome!
+Feel free to fork the repository and bring your ideas to life.
 
 ## 🛒 Commercial Edition
-A packaged commercial version is planned for release. Links will be provided here as soon as it's ready.
+A fully supported packaged version with advanced features is planned for release. Links will be provided here as soon as it is ready.
